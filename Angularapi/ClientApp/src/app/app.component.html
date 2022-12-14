@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">ClientName</th>
+      <th scope="col">Message</th>
+      <th scope="col">Date and Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of TableData">
+      <td>{{item._id}}</td>
+      <td>{{item.Name}}</td>
+      <td>{{item.Msg}}</td>
+      <td>{{item.CurrentTime}}</td>
+    </tr>
+  </tbody>
+  <button (click)="reloadCurrentPage()"> Refresh</button>
+</table>
+
+<router-outlet></router-outlet>
